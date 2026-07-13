@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+  ============================================================
+  MY GUYS PEST CONTROL — BRAND DESIGN SYSTEM
+  ------------------------------------------------------------
+  Core brand colors live here as CSS variables so they are
+  trivial to tweak in one place. Change these to rebrand the
+  whole site.
+  ============================================================
+*/
+
+:root {
+  /* Brand — pulled from the red/black spider logo */
+  --brand-red: #d81e22; /* bright brand red (CTAs, accents) */
+  --brand-red-dark: #9e1418; /* darker red for gradients / hover */
+  --brand-red-soft: #fdecec; /* faint red tint for surfaces */
+
+  --ink: #1a1a1a; /* near-black for dark sections + headings */
+  --ink-soft: #2b2b2b; /* secondary dark surface */
+
+  --paper: #ffffff; /* white */
+  --paper-alt: #f7f7f8; /* off-white alternating sections */
+  --muted: #6b7280; /* mid-gray body / secondary text */
+  --border: #e6e6e8; /* hairline borders */
+
+  /* Semantic tokens (light UI is the default for this brand) */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --primary: var(--brand-red);
+  --primary-foreground: #ffffff;
+  --secondary: var(--paper-alt);
+  --secondary-foreground: var(--ink);
+  --accent: var(--brand-red);
+  --accent-foreground: #ffffff;
+  --ring: var(--brand-red);
+  --input: var(--border);
+
+  --radius: 0.625rem; /* rounded-but-not-bubbly */
+}
+
+/*
+  Map brand variables to Tailwind's theme so utilities like
+  bg-brand-red, text-ink, border-border, font-display work.
+*/
+@theme inline {
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-red-soft: var(--brand-red-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Industrial, condensed, uppercase-friendly headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  /* Consistent, visible keyboard focus for a11y (WCAG AA) */
+  :focus-visible {
+    outline: 2px solid var(--brand-red);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: var(--brand-red);
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Thin red divider that echoes the underline in the logo */
+  .brand-rule {
+    display: inline-block;
+    height: 4px;
+    width: 3.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(
+      90deg,
+      var(--brand-red),
+      var(--brand-red-dark)
+    );
+  }
+
+  /* Reusable red CTA gradient */
+  .brand-gradient {
+    background-image: linear-gradient(
+      135deg,
+      var(--brand-red) 0%,
+      var(--brand-red-dark) 100%
+    );
+  }
+
+  /* Section vertical rhythm */
+  .section {
+    padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  }
+
+  /* Subtle grid texture for dark hero sections */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
