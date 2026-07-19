@@ -80,7 +80,7 @@ export default function AboutPage() {
             ].map((s) => (
               <div key={s.label} className="rounded-2xl border border-border bg-paper-alt p-6 text-center">
                 <p className="font-display text-4xl font-extrabold text-ink">
-                  {s.decimal ? s.value : <StatCounter value={s.value} />}
+                  <StatCounter value={s.value} />
                   <span className="text-brand-red">{s.suffix}</span>
                 </p>
                 <p className="mt-1 text-sm font-medium text-muted">{s.label}</p>

@@ -23,17 +23,8 @@ export function TrustBar() {
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-display text-4xl font-extrabold text-ink sm:text-5xl">
-                {s.decimal ? (
-                  <>
-                    {s.value}
-                    <span className="text-brand-red">{s.suffix}</span>
-                  </>
-                ) : (
-                  <>
-                    <StatCounter value={s.value} />
-                    <span className="text-brand-red">{s.suffix}</span>
-                  </>
-                )}
+                <StatCounter value={s.value} />
+                <span className="text-brand-red">{s.suffix}</span>
               </p>
               <p className="mt-1 text-sm font-medium text-muted">{s.label}</p>
             </div>
