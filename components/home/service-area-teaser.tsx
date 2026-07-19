@@ -1,6 +1,7 @@
 import { MapPin } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { ZipChecker } from "@/components/shared/zip-checker";
+import { MapEmbed } from "@/components/shared/map-embed";
 import { servedCities } from "@/lib/zips";
 import { siteConfig } from "@/lib/site-config";
 
@@ -39,17 +40,13 @@ export function ServiceAreaTeaser() {
             </ul>
           </div>
 
-          {/* Map placeholder */}
+          {/* Coverage-area map */}
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-            <div className="absolute inset-0 hero-grid opacity-100 [background-color:#eef0f2]" aria-hidden />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
-              <MapPin className="size-10 text-brand-red" />
-              <p className="font-semibold text-ink">[Embedded Map Placeholder]</p>
-              <p className="max-w-xs px-6 text-sm text-muted">
-                {/* TODO: embed Google Maps iframe of your service area here */}
-                Drop in a Google Maps embed of your coverage area.
-              </p>
-            </div>
+            <MapEmbed
+              src={siteConfig.mapEmbedSrc}
+              title={`${siteConfig.name} service area map`}
+              className="absolute inset-0 h-full w-full border-0"
+            />
           </div>
         </div>
       </Container>

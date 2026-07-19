@@ -1,27 +1,27 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Bug,
-  House,
-  Mouse,
-  BedDouble,
-  Droplet,
-  Hexagon,
-  Rat,
-} from "lucide-react";
+import { ArrowRight, House, BedDouble, Droplet, Hexagon, Rat } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
+import {
+  AntIcon,
+  BeeIcon,
+  CockroachIcon,
+  SpiderIcon,
+  FleaIcon,
+} from "@/components/shared/pest-icons";
 
 const treats = [
-  { name: "Ants", href: "/services/ants", Icon: Bug },
+  { name: "Ants", href: "/services/ants", Icon: AntIcon },
   { name: "Termites", href: "/services/termite-control", Icon: House },
-  { name: "Rodents", href: "/services/rodent-control", Icon: Mouse },
-  { name: "Cockroaches", href: "/services/cockroaches", Icon: Rat },
+  { name: "Rodents", href: "/services/rodent-control", Icon: Rat },
+  { name: "Cockroaches", href: "/services/cockroaches", Icon: CockroachIcon },
   { name: "Bed Bugs", href: "/services/bed-bugs", Icon: BedDouble },
   { name: "Mosquitoes", href: "/services/mosquito-tick", Icon: Droplet },
-  { name: "Spiders", href: "/services/spiders", Icon: Bug },
+  { name: "Spiders", href: "/services/spiders", Icon: SpiderIcon },
   { name: "Wasps", href: "/services/wasps-stinging-insects", Icon: Hexagon },
+  { name: "Bees", href: "/services/wasps-stinging-insects", Icon: BeeIcon },
+  { name: "Fleas", href: "/services/general-pest-control", Icon: FleaIcon },
 ];
 
 export function ServicesGrid() {
@@ -34,7 +34,7 @@ export function ServicesGrid() {
           lead="From seasonal invaders to structural threats, our licensed technicians handle it all with a targeted, responsible approach."
         />
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {treats.map(({ name, href, Icon }, i) => (
             <Reveal key={name} delay={i * 0.05}>
               <Link

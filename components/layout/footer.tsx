@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { Wordmark } from "@/components/shared/wordmark";
-import { NewsletterForm } from "@/components/shared/newsletter-form";
+import { QuickQuoteDialog } from "@/components/forms/quick-quote-dialog";
 import { FacebookIcon, InstagramIcon } from "@/components/shared/social-icons";
 import { footerNav, siteConfig } from "@/lib/site-config";
 
@@ -16,13 +16,11 @@ export function Footer() {
         <Container className="flex flex-col items-center justify-between gap-6 py-10 md:flex-row">
           <div className="text-center md:text-left">
             <h3 className="font-display text-2xl font-extrabold uppercase text-white">
-              Pest problem? Let&apos;s solve it.
+              Pest Problem? Let&apos;s Solve It.
             </h3>
-            <p className="mt-1 text-sm text-white/60">
-              Get seasonal pest tips and exclusive offers — or request a fast free quote.
-            </p>
+            <p className="mt-1 text-sm text-white/60">Request a fast free quote.</p>
           </div>
-          <NewsletterForm />
+          <QuickQuoteDialog />
         </Container>
       </div>
 
@@ -88,10 +86,6 @@ export function Footer() {
             © {year} {siteConfig.name}. All rights reserved. · {siteConfig.licenseNumber}
           </p>
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5 text-white/70">
-              <Star className="size-3.5 fill-amber-400 text-amber-400" />
-              {siteConfig.rating.value} · {siteConfig.rating.count.toLocaleString()}+ reviews
-            </span>
             <a
               href={siteConfig.social.facebook}
               aria-label="Facebook"

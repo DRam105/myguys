@@ -19,7 +19,7 @@ export const plans: Plan[] = [
     slug: "basic",
     name: "Basic",
     tagline: "Essential protection for smaller homes",
-    priceFrom: "$29",
+    priceFrom: "$99",
     cadence: "/mo",
     features: [
       "Quarterly service visits",
@@ -34,7 +34,7 @@ export const plans: Plan[] = [
     slug: "home-shield",
     name: "Home Shield",
     tagline: "Our most popular year-round protection",
-    priceFrom: "$45",
+    priceFrom: "$89",
     cadence: "/mo",
     popular: true,
     features: [
@@ -51,7 +51,7 @@ export const plans: Plan[] = [
     slug: "premium",
     name: "Premium",
     tagline: "Total-home defense with the works",
-    priceFrom: "$69",
+    priceFrom: "$79",
     cadence: "/mo",
     features: [
       "Monthly or bi-monthly visits",

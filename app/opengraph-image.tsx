@@ -61,7 +61,7 @@ export default function OgImage() {
         </div>
 
         <div style={{ display: "flex", gap: 30, color: "rgba(255,255,255,0.75)", fontSize: 26 }}>
-          <span>★ {siteConfig.rating.value}-Star Rated</span>
+          <span>Locally Owned</span>
           <span>Licensed &amp; Insured</span>
           <span>Same-Day Service</span>
         </div>

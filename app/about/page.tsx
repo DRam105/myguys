@@ -74,8 +74,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             {[
               { value: siteConfig.yearsInBusiness, suffix: "+", label: "Years in Business" },
-              { value: siteConfig.homesProtected, suffix: "+", label: "Homes Protected" },
-              { value: siteConfig.rating.value, suffix: "★", label: "Average Rating", decimal: true },
+              { value: siteConfig.treatments, suffix: "+", label: "Treatments" },
+              { value: 2, suffix: "hr", label: "Response Time" },
               { value: 100, suffix: "%", label: "Satisfaction Guarantee" },
             ].map((s) => (
               <div key={s.label} className="rounded-2xl border border-border bg-paper-alt p-6 text-center">

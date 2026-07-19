@@ -10,6 +10,8 @@ export type Review = {
   date: string;
   service: string;
   quote: string;
+  /** Show the star rating on this card. Set true only for verified reviews. */
+  showStars?: boolean;
 };
 
 export const reviews: Review[] = [
@@ -17,6 +19,7 @@ export const reviews: Review[] = [
     name: "Sarah M.",
     location: "Carlsbad",
     rating: 5,
+    showStars: true,
     date: "2 weeks ago",
     service: "General Pest Control",
     quote:
@@ -26,6 +29,7 @@ export const reviews: Review[] = [
     name: "James T.",
     location: "Oceanside",
     rating: 5,
+    showStars: true,
     date: "1 month ago",
     service: "Rodent Control",
     quote:
@@ -35,6 +39,7 @@ export const reviews: Review[] = [
     name: "Priya K.",
     location: "Encinitas",
     rating: 5,
+    showStars: true,
     date: "3 weeks ago",
     service: "Mosquito & Tick",
     quote:
@@ -86,8 +91,3 @@ export const reviews: Review[] = [
       "A huge wasp nest showed up over our front door. They came out fast, removed it safely, and treated the area so it wouldn't come back. Lifesavers!",
   },
 ];
-
-export const aggregateRating = {
-  value: 4.9,
-  count: reviews.length * 150, // illustrative aggregate
-};

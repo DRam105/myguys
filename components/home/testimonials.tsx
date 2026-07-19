@@ -2,11 +2,11 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ReviewCard } from "@/components/shared/review-card";
-import { reviews, aggregateRating } from "@/lib/reviews";
+import { reviews } from "@/lib/reviews";
 
 export function Testimonials() {
   const scroller = useRef<HTMLDivElement>(null);
@@ -28,17 +28,6 @@ export function Testimonials() {
             className="md:mx-0"
           />
           <div className="flex items-center gap-4">
-            <div className="text-right">
-              <div className="flex items-center gap-1.5">
-                <span className="font-display text-3xl font-extrabold text-ink">
-                  {aggregateRating.value}
-                </span>
-                <Star className="size-6 fill-amber-400 text-amber-400" />
-              </div>
-              <p className="text-xs text-muted">
-                {aggregateRating.count.toLocaleString()}+ verified reviews
-              </p>
-            </div>
             <div className="hidden gap-2 md:flex">
               <button
                 onClick={() => scroll(-1)}

@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { PageHero } from "@/components/shared/page-hero";
 import { ContactForm } from "@/components/forms/contact-form";
+import { MapEmbed } from "@/components/shared/map-embed";
 import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
@@ -49,15 +50,9 @@ export default function ContactPage() {
             ))}
           </ContactRow>
 
-          {/* Map placeholder */}
+          {/* Office location map */}
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-paper-alt">
-            <div className="absolute inset-0 hero-grid opacity-100 [background-color:#eef0f2]" aria-hidden />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
-              <MapPin className="size-9 text-brand-red" />
-              <p className="font-semibold text-ink">[Embedded Map Placeholder]</p>
-              {/* TODO: embed a Google Maps iframe of your office / service area */}
-              <p className="px-6 text-sm text-muted">Drop in a Google Maps embed here.</p>
-            </div>
+            <MapEmbed zoom={14} className="absolute inset-0 h-full w-full border-0" />
           </div>
         </div>
 

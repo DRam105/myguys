@@ -8,7 +8,7 @@ import { plans } from "@/lib/plans";
 
 export function PlansPreview() {
   return (
-    <section className="section bg-paper-alt">
+    <section className="section bg-white">
       <Container>
         <SectionHeading
           eyebrow="Plans & Pricing"

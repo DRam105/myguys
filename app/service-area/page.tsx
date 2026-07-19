@@ -4,6 +4,7 @@ import { Container } from "@/components/shared/container";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ZipChecker } from "@/components/shared/zip-checker";
+import { MapEmbed } from "@/components/shared/map-embed";
 import { CtaBand } from "@/components/shared/cta-band";
 import { servedCities } from "@/lib/zips";
 import { siteConfig } from "@/lib/site-config";
@@ -59,17 +60,13 @@ export default function ServiceAreaPage() {
             </p>
           </div>
 
-          {/* Map placeholder */}
+          {/* Coverage-area map */}
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-paper-alt lg:aspect-[4/3]">
-            <div className="absolute inset-0 hero-grid opacity-100 [background-color:#eef0f2]" aria-hidden />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
-              <MapPin className="size-10 text-brand-red" />
-              <p className="font-semibold text-ink">[Embedded Map Placeholder]</p>
-              {/* TODO: embed a Google Maps iframe showing your coverage area */}
-              <p className="max-w-xs px-6 text-sm text-muted">
-                Drop in a Google Maps embed of your service area here.
-              </p>
-            </div>
+            <MapEmbed
+              src={siteConfig.mapEmbedSrc}
+              title={`${siteConfig.name} service area map`}
+              className="absolute inset-0 h-full w-full border-0"
+            />
           </div>
         </Container>
       </section>

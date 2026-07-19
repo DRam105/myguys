@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { Phone, ShieldCheck, Clock, Star, CheckCircle2 } from "lucide-react";
+import { Phone, ShieldCheck, Clock, CheckCircle2, Leaf } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { Button } from "@/components/ui/button";
 import { ZipChecker } from "@/components/shared/zip-checker";
-import { StarRating } from "@/components/shared/star-rating";
 import { siteConfig } from "@/lib/site-config";
 
 const trustPoints = [
-  { icon: Star, label: `${siteConfig.rating.value}-Star Rated` },
   { icon: ShieldCheck, label: "Licensed & Insured" },
   { icon: Clock, label: "Same-Day Service Available" },
+  { icon: Leaf, label: "Pet- & Family-Friendly" },
 ];
 
 export function Hero() {
@@ -99,23 +98,6 @@ export function Hero() {
                     Satisfaction Guaranteed
                   </p>
                   <p className="text-sm text-white/60">Or we re-treat for free</p>
-                </div>
-              </div>
-
-              <div className="mt-6 rounded-2xl bg-white/5 p-5">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-display text-4xl font-extrabold text-white">
-                      {siteConfig.rating.value}
-                    </p>
-                    <StarRating rating={siteConfig.rating.value} size={16} className="mt-1" />
-                  </div>
-                  <div className="text-right text-sm text-white/60">
-                    <p className="font-bold text-white">
-                      {siteConfig.rating.count.toLocaleString()}+
-                    </p>
-                    <p>happy customers</p>
-                  </div>
                 </div>
               </div>
 

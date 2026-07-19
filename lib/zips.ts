@@ -10,6 +10,7 @@ export const servedZips: string[] = [
   "92081", "92083", "92084", // Vista
   "92069", "92078", // San Marcos
   "92025", "92026", "92027", "92029", // Escondido
+  "92082", // Valley Center
   "92024", // Encinitas
   "92007", // Cardiff
   "92014", // Del Mar
@@ -17,13 +18,11 @@ export const servedZips: string[] = [
   "92067", "92091", // Rancho Santa Fe
   "92003", "92028", // Bonsall / Fallbrook
   "92127", "92128", // Rancho Bernardo / 4S Ranch
+  "92129", // Rancho Peñasquitos
   "92064", // Poway
   // Temecula & Murrieta (SW Riverside County)
   "92590", "92591", "92592", // Temecula
   "92562", "92563", // Murrieta
-  "92595", // Wildomar
-  "92584", "92585", "92586", "92587", // Menifee
-  "92530", "92531", "92532", // Lake Elsinore
 ];
 
 /** Cities/neighborhoods shown on the service-area page. */
@@ -38,11 +37,13 @@ export const servedCities: string[] = [
   "Solana Beach",
   "Rancho Santa Fe",
   "Fallbrook",
+  "Bonsall",
+  "Poway",
+  "Rancho Bernardo",
+  "Rancho Peñasquitos",
+  "Valley Center",
   "Temecula",
   "Murrieta",
-  "Wildomar",
-  "Menifee",
-  "Lake Elsinore",
 ];
 
 export type ZipResult =

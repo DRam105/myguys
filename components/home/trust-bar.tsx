@@ -1,4 +1,4 @@
-import { ShieldCheck, Award, ThumbsUp, BadgeCheck } from "lucide-react";
+import { ShieldCheck, ThumbsUp } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { StatCounter } from "@/components/shared/stat-counter";
 import { siteConfig } from "@/lib/site-config";
@@ -6,15 +6,13 @@ import { siteConfig } from "@/lib/site-config";
 export function TrustBar() {
   const stats = [
     { value: siteConfig.yearsInBusiness, suffix: "+", label: "Years in Business" },
-    { value: siteConfig.homesProtected, suffix: "+", label: "Homes Protected" },
-    { value: siteConfig.rating.value, suffix: "★", label: "Average Rating", decimal: true },
-    { value: 100, suffix: "%", label: "Satisfaction Guarantee" },
+    { value: siteConfig.treatments, suffix: "+", label: "Treatments" },
+    { value: 2, suffix: "hr", label: "Response Time" },
+    { value: 24, suffix: "hr", label: "Dispatch Time" },
   ];
 
   const badges = [
     { icon: ShieldCheck, label: "Licensed & Insured" },
-    { icon: Award, label: "[BBB Accredited]" },
-    { icon: BadgeCheck, label: "[EPA-Registered Products]" },
     { icon: ThumbsUp, label: "Satisfaction Guaranteed" },
   ];
 

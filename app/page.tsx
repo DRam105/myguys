@@ -15,9 +15,9 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
       <ServicesGrid />
-      <WhyChoose />
       <HowItWorks />
       <PlansPreview />
+      <WhyChoose />
       <OfferBanner />
       <Testimonials />
       <ServiceAreaTeaser />

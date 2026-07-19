@@ -17,8 +17,8 @@ export function ReviewCard({
         className,
       )}
     >
-      <div className="flex items-center justify-between">
-        <StarRating rating={review.rating} />
+      <div className={cn("flex items-center", review.showStars ? "justify-between" : "justify-end")}>
+        {review.showStars && <StarRating rating={review.rating} />}
         <Quote className="size-8 text-brand-red/15" aria-hidden />
       </div>
       <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-ink/85">

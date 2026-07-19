@@ -15,14 +15,14 @@ export const siteConfig = {
   // to "/logo.jpeg". Until then we use the branded SVG placeholder.
   logo: "/logo-placeholder.svg",
   // Used for absolute URLs (OG images, sitemap, JSON-LD). Update on deploy.
-  url: "https://myguyspestcontrol.com",
+  url: "https://myguyspc.com",
   description:
     "Fast, guaranteed, locally-owned pest control. Licensed & insured technicians protect your home and family from ants, termites, rodents, roaches, mosquitoes and more. Get a free quote today.",
 
   // ---- REPLACE THESE ----
   phone: "(760) 309-7400",
   phoneHref: "tel:7603097400", // digits only for tap-to-call
-  email: "[hello@myguyspestcontrol.com]",
+  email: "info@myguyspc.com",
   address: {
     street: "3145 Tiger Run Ct, Ste 107",
     city: "Carlsbad",
@@ -30,19 +30,17 @@ export const siteConfig = {
     zip: "92010",
   },
   region: "North County San Diego, Temecula & Murrieta",
+  // Coverage-area map. Paste a Google Maps "Embed a map" src here
+  // (Google Maps → Share → Embed a map → copy the iframe src).
+  mapEmbedSrc:
+    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d213797.48042667605!2d-117.16480301987308!3d33.14624906686366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1784434757224!5m2!1sen!2sus",
   licenseNumber: "[License #000000]",
   hours: [
-    { day: "Monday – Friday", time: "7:00 AM – 7:00 PM" },
-    { day: "Saturday", time: "8:00 AM – 4:00 PM" },
-    { day: "Sunday", time: "Closed (emergency line available)" },
+    { day: "Monday – Friday", time: "8:00 AM – 5:00 PM" },
+    { day: "Saturday – Sunday", time: "Closed" },
   ],
-  // Aggregate rating shown in trust bars + JSON-LD (replace with real data).
-  rating: {
-    value: 4.9,
-    count: 1200,
-  },
-  yearsInBusiness: 15,
-  homesProtected: 25000,
+  yearsInBusiness: 10,
+  treatments: 22000,
   offer: {
     // The urgency banner. Replace with your real promotion.
     headline: "$50 Off Your First Recurring Service",

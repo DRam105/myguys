@@ -18,6 +18,15 @@ export const contactSchema = z.object({
 });
 export type ContactValues = z.infer<typeof contactSchema>;
 
+/** Quick quote form (footer modal). */
+export const quickQuoteSchema = z.object({
+  name,
+  email,
+  phone,
+  issue: z.string().min(3, "Please tell us the pest issue you're having"),
+});
+export type QuickQuoteValues = z.infer<typeof quickQuoteSchema>;
+
 /** Multi-step quote form (used on /quote). Split per step for validation. */
 export const quoteStep1Schema = z.object({
   pestProblem: z.string().min(1, "Please choose a pest problem"),
