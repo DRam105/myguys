@@ -22,6 +22,10 @@ export const siteConfig = {
   phone: "(760) 309-7400",
   phoneHref: "tel:7603097400", // digits only for tap-to-call
   email: "info@myguyspc.com",
+  // Where form submissions (quote / contact / quick-quote) are sent.
+  // Paste your GoHighLevel inbound-webhook URL here to activate lead capture.
+  // While empty, forms still show a success message but don't send anywhere.
+  leadWebhookUrl: "",
   address: {
     street: "3145 Tiger Run Ct, Ste 107",
     city: "Carlsbad",

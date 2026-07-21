@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { siteConfig } from "@/lib/site-config";
+import { submitLead } from "@/lib/submit-lead";
 
 export function QuickQuoteDialog({
   triggerClassName,
@@ -40,12 +41,7 @@ export function QuickQuoteDialog({
   async function onSubmit(values: QuickQuoteValues) {
     setServerError(null);
     try {
-      const res = await fetch("/api/quick-quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      await submitLead({ ...values, form: "quick-quote" });
       setSubmitted(true);
     } catch {
       setServerError("Something went wrong. Please call us or try again.");

@@ -4,6 +4,9 @@ import { getServiceSlugs } from "@/lib/services";
 import { getPestSlugs } from "@/lib/pests";
 import { getAllPostSlugs } from "@/lib/blog";
 
+// Required for `output: export` (static generation).
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();

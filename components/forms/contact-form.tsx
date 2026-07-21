@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { contactSchema, type ContactValues } from "@/lib/validations";
+import { submitLead } from "@/lib/submit-lead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,12 +24,7 @@ export function ContactForm() {
   async function onSubmit(values: ContactValues) {
     setServerError(null);
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      await submitLead({ ...values, form: "contact" });
       setSubmitted(true);
     } catch {
       setServerError("Something went wrong. Please call us or try again.");

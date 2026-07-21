@@ -27,6 +27,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { siteConfig } from "@/lib/site-config";
+import { submitLead } from "@/lib/submit-lead";
 import { cn } from "@/lib/utils";
 
 const steps: { title: string; fields: Path<QuoteValues>[] }[] = [
@@ -77,12 +78,7 @@ export function QuoteForm() {
   async function onSubmit(values: QuoteValues) {
     setServerError(null);
     try {
-      const res = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      await submitLead({ ...values, form: "quote" });
       setSubmitted(true);
     } catch {
       setServerError("Something went wrong. Please call us or try again.");
