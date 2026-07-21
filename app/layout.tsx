@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileCallBar } from "@/components/layout/mobile-call-bar";
 import { LiveChatButton } from "@/components/shared/live-chat-button";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/shared/json-ld";
 import { localBusinessSchema } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -61,13 +62,10 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-background">
         {/*
-          ============================================================
-          ANALYTICS PLACEHOLDER
-          Drop your Google Analytics / GTM snippet here (or use
-          next/script). Example:
-          <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" />
-          TODO: add GA4 / GTM measurement ID.
-          ============================================================
+          ANALYTICS
+          - Vercel Web Analytics is active via <Analytics /> below.
+          - To also add Google Analytics 4: install @next/third-parties and
+            render <GoogleAnalytics gaId="G-XXXX" /> here.
         */}
         <JsonLd data={localBusinessSchema()} />
 
@@ -78,6 +76,7 @@ export default function RootLayout({
 
         <MobileCallBar />
         <LiveChatButton />
+        <Analytics />
       </body>
     </html>
   );
