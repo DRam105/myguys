@@ -11,9 +11,8 @@
 export const siteConfig = {
   name: "My Guys Pest Control",
   shortName: "My Guys",
-  // Header/footer logo. Drop your file at /public/logo.jpeg and set this
-  // to "/logo.jpeg". Until then we use the branded SVG placeholder.
-  logo: "/logo-placeholder.svg",
+  // Header/footer logo (square red MG spider lockup on white).
+  logo: "/logo.png",
   // Used for absolute URLs (OG images, sitemap, JSON-LD). Update on deploy.
   url: "https://myguyspc.com",
   description:

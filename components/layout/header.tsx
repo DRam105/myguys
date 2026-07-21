@@ -41,10 +41,10 @@ export function Header() {
           <Image
             src={siteConfig.logo}
             alt={siteConfig.name}
-            width={200}
-            height={190}
+            width={512}
+            height={512}
             priority
-            className="h-11 w-auto sm:h-14"
+            className="h-12 w-auto sm:h-16"
           />
         </Link>
 
@@ -104,9 +104,9 @@ export function Header() {
                 <Image
                   src={siteConfig.logo}
                   alt={siteConfig.name}
-                  width={160}
-                  height={152}
-                  className="h-11 w-auto"
+                  width={512}
+                  height={512}
+                  className="h-12 w-auto"
                 />
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </div>
