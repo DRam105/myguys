@@ -41,7 +41,7 @@ export function ServicesGrid() {
                     alt={name}
                     fill
                     sizes="64px"
-                    className="object-cover grayscale transition duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <div>
