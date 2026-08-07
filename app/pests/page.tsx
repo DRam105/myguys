@@ -6,7 +6,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { CtaBand } from "@/components/shared/cta-band";
 import { Reveal } from "@/components/shared/reveal";
 import { Badge } from "@/components/ui/badge";
-import { Icon, type IconName } from "@/components/shared/icons";
+import Image from "next/image";
 import { pests } from "@/lib/pests";
 import { pageMeta } from "@/lib/seo";
 
@@ -38,8 +38,14 @@ export default function PestsPage() {
                   className="group flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-xl"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="flex size-14 items-center justify-center rounded-xl bg-brand-red-soft text-brand-red transition-colors group-hover:brand-gradient group-hover:text-white">
-                      <Icon name={pest.icon as IconName} className="size-7" />
+                    <span className="relative block size-16 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-red/40 ring-offset-2 ring-offset-white transition-all group-hover:ring-brand-red">
+                      <Image
+                        src={`/pest-photos/${pest.icon}.jpg`}
+                        alt={pest.name}
+                        fill
+                        sizes="64px"
+                        className="object-cover grayscale transition duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                      />
                     </span>
                     <Badge variant="soft">{pest.category}</Badge>
                   </div>

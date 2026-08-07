@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Users, ShieldCheck, Leaf, Heart, Award, BadgeCheck } from "lucide-react";
+import { Users, ShieldCheck, Leaf, Heart } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -20,14 +20,7 @@ const values = [
   { icon: Users, title: "Local & Family-Owned", body: "We live and work in the same communities we protect. Your neighbors are our customers." },
   { icon: ShieldCheck, title: "Integrity First", body: "Honest recommendations, upfront pricing, and no upselling you things you don't need." },
   { icon: Leaf, title: "Responsible Treatments", body: "Integrated Pest Management that targets pests precisely while protecting your family and pets." },
-  { icon: Heart, title: "Customer Obsessed", body: "We treat every home like our own and stand behind our work with a satisfaction guarantee." },
-];
-
-const team = [
-  { name: "[Owner Name]", role: "Founder & Lead Technician" },
-  { name: "[Team Member]", role: "Service Manager" },
-  { name: "[Team Member]", role: "Senior Technician" },
-  { name: "[Team Member]", role: "Customer Care" },
+  { icon: Heart, title: "Customer Obsessed", body: "We treat every home like our own and stand behind our work with professional pest management." },
 ];
 
 export default function AboutPage() {
@@ -76,7 +69,7 @@ export default function AboutPage() {
               { value: siteConfig.yearsInBusiness, suffix: "+", label: "Years in Business" },
               { value: siteConfig.treatments, suffix: "+", label: "Treatments" },
               { value: 2, suffix: "hr", label: "Response Time" },
-              { value: 100, suffix: "%", label: "Satisfaction Guarantee" },
+              { value: 24, suffix: "hr", label: "Dispatch Time" },
             ].map((s) => (
               <div key={s.label} className="rounded-2xl border border-border bg-paper-alt p-6 text-center">
                 <p className="font-display text-4xl font-extrabold text-ink">
@@ -114,55 +107,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Licensing / certifications */}
-      <section className="section bg-white">
-        <Container>
-          <SectionHeading
-            eyebrow="Licensed & Certified"
-            title="Credentials You Can Count On"
-          />
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {[
-              { icon: ShieldCheck, label: "Licensed & Insured", sub: siteConfig.licenseNumber },
-              { icon: Award, label: "[BBB Accredited]", sub: "A+ Rating" },
-              { icon: BadgeCheck, label: "[EPA-Registered]", sub: "Products" },
-              { icon: Leaf, label: "[QualityPro]", sub: "Certified" },
-            ].map(({ icon: Icon, label, sub }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center gap-2 rounded-2xl border border-border bg-paper-alt p-6 text-center"
-              >
-                <Icon className="size-9 text-brand-red" />
-                <p className="font-bold text-ink">{label}</p>
-                <p className="text-xs text-muted">{sub}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Team */}
-      <section className="section bg-paper-alt">
-        <Container>
-          <SectionHeading
-            eyebrow="Meet the Team"
-            title="The Guys Behind My Guys"
-            lead="Friendly, professional, and local. (Add real team photos and bios here.)"
-          />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member) => (
-              <div key={member.role} className="text-center">
-                <div className="mx-auto flex aspect-square w-full max-w-[200px] items-center justify-center rounded-2xl bg-ink text-white">
-                  <Users className="size-12 text-white/30" />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-ink">{member.name}</h3>
-                <p className="text-sm text-brand-red">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* Community */}
       <section className="section bg-white">
         <Container>
@@ -172,10 +116,14 @@ export default function AboutPage() {
               Proud to Give Back
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-white/85">
-              We believe in supporting the communities that support us — from
-              sponsoring local youth sports to [community program placeholder].
-              When you choose My Guys, you&apos;re supporting a local business that
-              invests right back into the neighborhood.
+              We believe in protecting more than just homes. From sponsoring
+              local youth sports teams to offering discounted service for the
+              veterans, active military, and first responders who serve our
+              community, we look for real ways to give back. And because
+              responsible pest control matters, we practice safe bee relocation
+              whenever we can — protecting the pollinators our neighborhoods
+              depend on. When you choose My Guys, you&apos;re supporting a local
+              business that invests right back into the community.
             </p>
           </div>
         </Container>

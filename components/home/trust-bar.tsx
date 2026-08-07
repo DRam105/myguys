@@ -13,7 +13,7 @@ export function TrustBar() {
 
   const badges = [
     { icon: ShieldCheck, label: "Licensed & Insured" },
-    { icon: ThumbsUp, label: "Satisfaction Guaranteed" },
+    { icon: ThumbsUp, label: "Professional Pest Management" },
   ];
 
   return (

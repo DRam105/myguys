@@ -11,8 +11,8 @@ const values = [
   },
   {
     icon: ShieldCheck,
-    title: "Guaranteed Results",
-    body: "If pests return between scheduled visits, so do we — with free re-treatments and a satisfaction guarantee.",
+    title: "Professional Pest Management",
+    body: "If pests return between scheduled visits, so do we — with free re-treatments, no questions asked.",
   },
   {
     icon: Leaf,

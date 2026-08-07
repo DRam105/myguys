@@ -95,9 +95,8 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="font-display text-lg font-bold uppercase text-white">
-                    Satisfaction Guaranteed
+                    Professional Pest Management
                   </p>
-                  <p className="text-sm text-white/60">Or we re-treat for free</p>
                 </div>
               </div>
 

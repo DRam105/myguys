@@ -14,7 +14,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Plans & Pricing",
   description:
-    "Flexible recurring pest control plans for every home — Basic, Home Shield, and Premium. Every plan includes our free re-treatment guarantee. Get exact pricing today.",
+    "Flexible recurring pest control plans for every home — Basic, Essential, and Premier. Every plan includes our free re-treatment guarantee. Get exact pricing today.",
   path: "/plans",
 });
 
@@ -27,7 +27,7 @@ const planFaqs = [
   {
     question: "Is there a long-term contract?",
     answer:
-      "Our recurring plans are month-to-month with no long lock-in. We earn your business every visit, backed by our satisfaction guarantee.",
+      "Our recurring plans are month-to-month with no long lock-in. We earn your business every visit, backed by our professional pest management.",
   },
   {
     question: "What does the free re-treatment guarantee cover?",

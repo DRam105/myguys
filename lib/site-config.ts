@@ -13,6 +13,12 @@ export const siteConfig = {
   shortName: "My Guys",
   // Header/footer logo (square red MG spider lockup on white).
   logo: "/logo.png",
+  // Wide horizontal lockup: MG spider + "MY GUYS PEST CONTROL" wordmark (~3.64:1).
+  logoBanner: "/logo-banner.png",
+  logoBannerWidth: 1400,
+  logoBannerHeight: 385,
+  // Circular MG spider badge on a white disc — used on dark surfaces (footer).
+  logoMark: "/logo-mark.png",
   // Used for absolute URLs (OG images, sitemap, JSON-LD). Update on deploy.
   url: "https://myguyspc.com",
   description:
@@ -37,7 +43,7 @@ export const siteConfig = {
   // (Google Maps → Share → Embed a map → copy the iframe src).
   mapEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d213797.48042667605!2d-117.16480301987308!3d33.14624906686366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1784434757224!5m2!1sen!2sus",
-  licenseNumber: "[License #000000]",
+  licenseNumber: "License #: OPR 12980 · PR #7601",
   hours: [
     { day: "Monday – Friday", time: "8:00 AM – 5:00 PM" },
     { day: "Saturday – Sunday", time: "Closed" },
@@ -47,8 +53,7 @@ export const siteConfig = {
   offer: {
     // The urgency banner. Replace with your real promotion.
     headline: "$50 Off Your First Recurring Service",
-    subtext: "New customers only. Mention code [SAVE50] when you book.",
-    expires: "[limited time]",
+    code: "TryMyGuys",
   },
 
   social: {

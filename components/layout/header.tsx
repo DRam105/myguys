@@ -39,12 +39,12 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center" aria-label={`${siteConfig.name} home`}>
           <Image
-            src={siteConfig.logo}
+            src={siteConfig.logoBanner}
             alt={siteConfig.name}
-            width={512}
-            height={512}
+            width={siteConfig.logoBannerWidth}
+            height={siteConfig.logoBannerHeight}
             priority
-            className="h-12 w-auto sm:h-16"
+            className="h-10 w-auto sm:h-14"
           />
         </Link>
 
@@ -102,11 +102,11 @@ export function Header() {
             <SheetContent side="right" className="flex w-[88%] max-w-sm flex-col p-0">
               <div className="flex items-center border-b border-border px-5 py-4">
                 <Image
-                  src={siteConfig.logo}
+                  src={siteConfig.logoBanner}
                   alt={siteConfig.name}
-                  width={512}
-                  height={512}
-                  className="h-12 w-auto"
+                  width={siteConfig.logoBannerWidth}
+                  height={siteConfig.logoBannerHeight}
+                  className="h-10 w-auto"
                 />
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </div>

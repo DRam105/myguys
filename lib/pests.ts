@@ -24,7 +24,7 @@ export const pests: Pest[] = [
   {
     slug: "ants",
     name: "Ants",
-    icon: "bug",
+    icon: "ant",
     category: "Insect",
     excerpt:
       "The #1 nuisance pest in America — and some species damage wood or bite.",
@@ -54,7 +54,7 @@ export const pests: Pest[] = [
   {
     slug: "termites",
     name: "Termites",
-    icon: "house",
+    icon: "termite",
     category: "Insect",
     excerpt:
       "Silent destroyers that cause billions in structural damage each year.",
@@ -84,7 +84,7 @@ export const pests: Pest[] = [
   {
     slug: "cockroaches",
     name: "Cockroaches",
-    icon: "bug",
+    icon: "cockroach",
     category: "Insect",
     excerpt:
       "Fast-breeding disease carriers and a leading indoor allergy trigger.",
@@ -114,7 +114,7 @@ export const pests: Pest[] = [
   {
     slug: "rodents",
     name: "Rodents",
-    icon: "mouse",
+    icon: "rodent",
     category: "Rodent",
     excerpt:
       "Mice and rats contaminate food, chew wiring, and spread disease.",
@@ -144,7 +144,7 @@ export const pests: Pest[] = [
   {
     slug: "bed-bugs",
     name: "Bed Bugs",
-    icon: "bedDouble",
+    icon: "bedbug",
     category: "Insect",
     excerpt:
       "Hitchhiking bloodsuckers that spread fast and are tough to eliminate.",
@@ -174,7 +174,7 @@ export const pests: Pest[] = [
   {
     slug: "mosquitoes",
     name: "Mosquitoes",
-    icon: "droplet",
+    icon: "mosquito",
     category: "Insect",
     excerpt:
       "The deadliest animal on earth — vectors for numerous diseases.",
@@ -204,7 +204,7 @@ export const pests: Pest[] = [
   {
     slug: "spiders",
     name: "Spiders",
-    icon: "bug",
+    icon: "spider",
     category: "Arachnid",
     excerpt:
       "Mostly harmless, but a few species pose a real danger to people.",
@@ -234,7 +234,7 @@ export const pests: Pest[] = [
   {
     slug: "wasps",
     name: "Wasps & Hornets",
-    icon: "hexagon",
+    icon: "wasp",
     category: "Insect",
     excerpt:
       "Aggressive stingers that can be dangerous — especially near nests.",
@@ -264,7 +264,7 @@ export const pests: Pest[] = [
   {
     slug: "ticks",
     name: "Ticks",
-    icon: "droplet",
+    icon: "tick",
     category: "Arachnid",
     excerpt:
       "Blood-feeding arachnids that transmit Lyme disease and more.",
@@ -294,7 +294,7 @@ export const pests: Pest[] = [
   {
     slug: "fleas",
     name: "Fleas",
-    icon: "bug",
+    icon: "flea",
     category: "Insect",
     excerpt:
       "Tiny biting pests that infest pets, carpets, and bedding fast.",

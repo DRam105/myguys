@@ -23,12 +23,18 @@ export function OfferBanner() {
           </span>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-white/80">
-              Limited-Time Offer · {siteConfig.offer.expires}
+              Limited-Time Offer
             </p>
             <h2 className="font-display text-3xl font-extrabold uppercase text-white sm:text-4xl">
               {siteConfig.offer.headline}
             </h2>
-            <p className="mt-1 text-sm text-white/80">{siteConfig.offer.subtext}</p>
+            <p className="mt-1 text-sm text-white/80">
+              New customers only. Mention code{" "}
+              <span className="inline-block rounded bg-white px-1.5 py-0.5 font-extrabold text-black">
+                {siteConfig.offer.code}
+              </span>{" "}
+              when you book.
+            </p>
           </div>
         </div>
 
