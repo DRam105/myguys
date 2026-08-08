@@ -22,7 +22,7 @@ export function CtaBand({
           {title}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/70">{subtitle}</p>
-        <CtaButtons className="mt-8 justify-center" onDark size="lg" />
+        <CtaButtons className="mt-8 justify-center" onDark size="lg" contact="text" />
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/60">
           <span className="flex items-center gap-2">
             <ShieldCheck className="size-4 text-brand-red" /> Licensed &amp; Insured

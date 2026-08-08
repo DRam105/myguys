@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, ShieldCheck, Clock, Leaf } from "lucide-react";
+import { MessageSquare, ShieldCheck, Clock, Leaf } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
@@ -26,9 +26,9 @@ export function FinalCta() {
             <Link href="/quote">Get a Free Quote</Link>
           </Button>
           <Button asChild size="xl" variant="onDark">
-            <a href={siteConfig.phoneHref}>
-              <Phone aria-hidden />
-              Call {siteConfig.phone}
+            <a href={siteConfig.smsHref}>
+              <MessageSquare aria-hidden />
+              Text Us
             </a>
           </Button>
         </div>
