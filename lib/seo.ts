@@ -67,8 +67,6 @@ export function localBusinessSchema() {
     sameAs: [
       siteConfig.social.facebook,
       siteConfig.social.instagram,
-      siteConfig.social.google,
-      siteConfig.social.yelp,
     ],
   };
 }

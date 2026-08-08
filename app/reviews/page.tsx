@@ -24,19 +24,6 @@ export default function ReviewsPage() {
         crumbs={[{ label: "Reviews" }]}
       />
 
-      {/* Review widget placeholders */}
-      <section className="border-b border-border bg-paper-alt">
-        <Container className="flex flex-col items-center justify-center gap-4 py-8 sm:flex-row">
-          {/* TODO: embed live Google & Facebook review widgets */}
-          <div className="rounded-full border border-border bg-white px-5 py-2.5 text-sm font-semibold text-muted">
-            [Google Reviews Widget]
-          </div>
-          <div className="rounded-full border border-border bg-white px-5 py-2.5 text-sm font-semibold text-muted">
-            [Facebook Reviews Widget]
-          </div>
-        </Container>
-      </section>
-
       {/* Wall */}
       <section className="section bg-white">
         <Container>

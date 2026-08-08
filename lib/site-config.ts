@@ -60,8 +60,6 @@ export const siteConfig = {
   social: {
     facebook: "https://facebook.com/[myguyspestcontrol]",
     instagram: "https://instagram.com/[myguyspestcontrol]",
-    google: "https://g.page/[myguyspestcontrol]",
-    yelp: "https://yelp.com/biz/[myguyspestcontrol]",
   },
 } as const;
 

@@ -16,6 +16,16 @@ export type Review = {
 
 export const reviews: Review[] = [
   {
+    name: "Daniel R.",
+    location: "San Marcos",
+    rating: 5,
+    showStars: true,
+    date: "Recently",
+    service: "General Pest Control",
+    quote:
+      "I've been using My Guys Pest Control since 2017 and couldn't be happier with their service. Albert and his team have always taken great care of us. Ants seem to be our biggest problem every summer, and rodents like to show up in the winter, but they've always been able to get everything under control quickly. What I really appreciate is how dependable and easy to work with they are. After years of satisfaction, I can definitely say I trust Albert and his team and wouldn't hesitate to recommend My Guys Pest Control to friends and family. Great local company and great people!",
+  },
+  {
     name: "Sarah M.",
     location: "Carlsbad",
     rating: 5,
