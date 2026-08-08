@@ -17,7 +17,6 @@ const perks = [
   "Fast, often same-day response",
   "Licensed & insured technicians",
   "Family- & pet-conscious treatments",
-  "Free re-treatments guarantee",
 ];
 
 export default function QuotePage() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, X, Phone } from "lucide-react";
+import { MessageCircle, X, Phone, MessageSquare } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -37,6 +37,12 @@ export function LiveChatButton() {
               className="flex items-center justify-center gap-2 rounded-lg brand-gradient px-4 py-2.5 text-sm font-semibold text-white"
             >
               <Phone className="size-4" /> Call {siteConfig.phone}
+            </a>
+            <a
+              href={siteConfig.smsHref}
+              className="flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-ink hover:border-brand-red hover:text-brand-red"
+            >
+              <MessageSquare className="size-4" /> Text My Guys
             </a>
             <a
               href="/quote"
