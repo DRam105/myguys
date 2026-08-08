@@ -64,7 +64,6 @@ export const services: Service[] = [
       "Exterior barrier treatment around your foundation",
       "Web and wasp-nest removal from eaves and entryways",
       "Granular yard treatment for crawling pests",
-      "Free re-treatments between scheduled visits",
     ],
     process: IPM_PROCESS,
     signs: [

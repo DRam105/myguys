@@ -12,7 +12,7 @@ const values = [
   {
     icon: ShieldCheck,
     title: "Professional Pest Management",
-    body: "If pests return between scheduled visits, so do we — with free re-treatments, no questions asked.",
+    body: "Licensed, experienced technicians using proven, responsible methods to solve your pest problem the right way.",
   },
   {
     icon: Leaf,
@@ -21,8 +21,8 @@ const values = [
   },
   {
     icon: Zap,
-    title: "Fast Same-Day Response",
-    body: "Wasp nest by the door? Ants overnight? We offer same-day and emergency service to solve urgent problems fast.",
+    title: "Priority Scheduling",
+    body: "Plan customers jump the line — priority scheduling gets you on the calendar fast when pests show up.",
   },
 ];
 
