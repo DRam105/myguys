@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Siren, type LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
 
-type Treat = { name: string; href: string; img?: string; Icon?: LucideIcon };
+type Treat = { name: string; href: string; img: string };
 
 const treats: Treat[] = [
   { name: "Ants", href: "/services/ants", img: "ant" },
@@ -17,7 +17,7 @@ const treats: Treat[] = [
   { name: "Spiders", href: "/services/spiders", img: "spider" },
   { name: "Bees & Wasps", href: "/services/wasps-stinging-insects", img: "bee" },
   { name: "Fleas", href: "/services/general-pest-control", img: "flea" },
-  { name: "Emergency Services", href: "/services/emergency", Icon: Siren },
+  { name: "Emergency Services", href: "/services/emergency", img: "emergency" },
 ];
 
 export function ServicesGrid() {
@@ -31,26 +31,20 @@ export function ServicesGrid() {
         />
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {treats.map(({ name, href, img, Icon }, i) => (
+          {treats.map(({ name, href, img }, i) => (
             <Reveal key={name} delay={i * 0.05}>
               <Link
                 href={href}
                 className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-xl"
               >
                 <div className="relative size-16 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-red/40 ring-offset-2 ring-offset-white transition-all group-hover:ring-brand-red">
-                  {img ? (
-                    <Image
-                      src={`/pest-photos/${img}.jpg`}
-                      alt={name}
-                      fill
-                      sizes="64px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                  ) : Icon ? (
-                    <span className="flex size-full items-center justify-center bg-brand-red-soft text-brand-red transition-colors group-hover:brand-gradient group-hover:text-white">
-                      <Icon className="size-8" />
-                    </span>
-                  ) : null}
+                  <Image
+                    src={`/pest-icons/${img}.jpg`}
+                    alt={name}
+                    fill
+                    sizes="64px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-ink">{name}</h3>

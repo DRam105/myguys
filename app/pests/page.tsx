@@ -40,7 +40,7 @@ export default function PestsPage() {
                   <div className="flex items-center justify-between">
                     <span className="relative block size-16 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-red/40 ring-offset-2 ring-offset-white transition-all group-hover:ring-brand-red">
                       <Image
-                        src={`/pest-photos/${pest.icon}.jpg`}
+                        src={`/pest-icons/${pest.icon}.jpg`}
                         alt={pest.name}
                         fill
                         sizes="64px"

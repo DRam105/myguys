@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { PageHero } from "@/components/shared/page-hero";
 import { CtaButtons } from "@/components/shared/cta-buttons";
 import { CtaBand } from "@/components/shared/cta-band";
 import { Reveal } from "@/components/shared/reveal";
-import { Icon, type IconName } from "@/components/shared/icons";
 import { services } from "@/lib/services";
 import { pageMeta } from "@/lib/seo";
+
+/** Service slugs that have a matching pest photo icon in /public/pest-icons. */
+const serviceImg: Record<string, string> = {
+  "termite-control": "termite",
+  "rodent-control": "rodent",
+  "mosquito-tick": "mosquito",
+  "bed-bugs": "bedbug",
+  ants: "ant",
+  cockroaches: "cockroach",
+  spiders: "spider",
+  "wasps-stinging-insects": "bee",
+};
 
 export const metadata: Metadata = pageMeta({
   title: "Pest Control Services",
@@ -39,9 +51,19 @@ export default function ServicesPage() {
                   href={`/services/${service.slug}`}
                   className="group flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-xl"
                 >
-                  <span className="flex size-14 items-center justify-center rounded-xl bg-brand-red-soft text-brand-red transition-colors group-hover:brand-gradient group-hover:text-white">
-                    <Icon name={service.icon as IconName} className="size-7" />
-                  </span>
+                  {serviceImg[service.slug] ? (
+                    <span className="relative block size-16 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-red/40 ring-offset-2 ring-offset-white transition-all group-hover:ring-brand-red">
+                      <Image
+                        src={`/pest-icons/${serviceImg[service.slug]}.jpg`}
+                        alt={service.name}
+                        fill
+                        sizes="64px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </span>
+                  ) : (
+                    <span className="block size-16 shrink-0" aria-hidden />
+                  )}
                   <h2 className="mt-5 text-xl font-bold text-ink">{service.name}</h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
                     {service.excerpt}
