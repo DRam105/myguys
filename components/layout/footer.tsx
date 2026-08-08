@@ -3,7 +3,6 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { Wordmark } from "@/components/shared/wordmark";
 import { QuickQuoteDialog } from "@/components/forms/quick-quote-dialog";
-import { FacebookIcon, InstagramIcon } from "@/components/shared/social-icons";
 import { footerNav, siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -86,24 +85,6 @@ export function Footer() {
             © {year} {siteConfig.name}. All rights reserved. · {siteConfig.licenseNumber}
           </p>
           <div className="flex items-center gap-5">
-            <a
-              href={siteConfig.social.facebook}
-              aria-label="Facebook"
-              className="hover:text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FacebookIcon className="size-4" />
-            </a>
-            <a
-              href={siteConfig.social.instagram}
-              aria-label="Instagram"
-              className="hover:text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon className="size-4" />
-            </a>
             <Link href="/privacy" className="hover:text-white">
               Privacy
             </Link>

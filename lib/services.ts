@@ -309,7 +309,6 @@ export const services: Service[] = [
       "Targeted, non-repellent baiting",
       "Interior and exterior perimeter treatment",
       "Moisture and entry-point recommendations",
-      "Free re-treatment guarantee",
     ],
     process: IPM_PROCESS,
     signs: [
@@ -358,7 +357,6 @@ export const services: Service[] = [
       "Insect growth regulators to stop reproduction",
       "Sanitation and exclusion recommendations",
       "Follow-up visits to confirm elimination",
-      "Free re-treatment guarantee",
     ],
     process: IPM_PROCESS,
     signs: [
@@ -407,7 +405,6 @@ export const services: Service[] = [
       "Identification of dangerous species (widow, recluse)",
       "Reduction of prey insects that attract spiders",
       "Cracks, crevice, and void treatment",
-      "Free re-treatment guarantee",
     ],
     process: IPM_PROCESS,
     signs: [
@@ -456,7 +453,6 @@ export const services: Service[] = [
       "Yellow-jacket ground-nest treatment",
       "Preventive treatment of common nesting spots",
       "Return visits for stubborn colonies",
-      "Free re-treatment guarantee",
     ],
     process: IPM_PROCESS,
     signs: [

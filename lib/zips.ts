@@ -34,6 +34,7 @@ export const servedCities: string[] = [
   "Escondido",
   "Encinitas",
   "Del Mar",
+  "Torrey Pines",
   "Solana Beach",
   "Rancho Santa Fe",
   "Fallbrook",

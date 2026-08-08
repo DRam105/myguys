@@ -40,7 +40,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
-            Fast, guaranteed, locally-owned pest control that protects your home
+            Fast, professional, locally-owned pest control that protects your home
             and family. Licensed technicians, responsible treatments, and free
             re-treatments if pests come back.
           </p>

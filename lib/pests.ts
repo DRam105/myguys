@@ -233,13 +233,13 @@ export const pests: Pest[] = [
   },
   {
     slug: "wasps",
-    name: "Wasps & Hornets",
-    icon: "wasp",
+    name: "Bees & Wasps",
+    icon: "bee",
     category: "Insect",
     excerpt:
-      "Aggressive stingers that can be dangerous — especially near nests.",
+      "Stinging insects that can be dangerous near nests — best handled by a pro.",
     intro:
-      "Wasps, hornets, and yellow jackets build nests under eaves, in shrubs, and underground. Unlike bees, they can sting repeatedly, and disturbing a nest can provoke an aggressive, dangerous response.",
+      "Bees, wasps, hornets, and yellow jackets nest under eaves, in shrubs, and underground. Wasps and hornets can sting repeatedly and aggressively defend their nests, while honey bees are best relocated rather than exterminated when possible.",
     identification: [
       "Slender bodies with a narrow waist",
       "Paper wasps build open, umbrella-shaped nests",
