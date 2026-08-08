@@ -16,13 +16,6 @@ export function MobileCallBar() {
         <Phone className="size-5 text-brand-red" />
         Call
       </a>
-      <a
-        href={siteConfig.smsHref}
-        className="flex items-center justify-center gap-1.5 border-r border-border py-3.5 text-[13px] font-bold text-ink"
-      >
-        <MessageSquare className="size-5 text-brand-red" />
-        Text Us
-      </a>
       <Link
         href="/quote"
         className="flex items-center justify-center gap-1.5 brand-gradient py-3.5 text-[13px] font-bold text-white"
@@ -30,6 +23,13 @@ export function MobileCallBar() {
         <CalendarCheck className="size-5" />
         Free Quote
       </Link>
+      <a
+        href={siteConfig.smsHref}
+        className="flex items-center justify-center gap-1.5 border-l border-border py-3.5 text-[13px] font-bold text-ink"
+      >
+        <MessageSquare className="size-5 text-brand-red" />
+        Text
+      </a>
     </div>
   );
 }
