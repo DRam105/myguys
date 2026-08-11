@@ -101,7 +101,7 @@ export const footerNav = {
     { label: "Plans & Pricing", href: "/plans" },
     { label: "Get a Free Quote", href: "/quote" },
     { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
+    { label: "Terms & Conditions", href: "/terms" },
   ],
 } as const;
 
