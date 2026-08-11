@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/shared/container";
 import { PageHero } from "@/components/shared/page-hero";
 import { siteConfig } from "@/lib/site-config";
@@ -6,11 +7,11 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Terms & Conditions",
-  description: "The terms and conditions governing use of the My Guys Pest Control website and services.",
+  description: "The terms and conditions governing use of the My Guys Pest Control website and communications.",
   path: "/terms",
 });
 
-const EFFECTIVE_DATE = "August 2026";
+const EFFECTIVE_DATE = "August 10, 2026";
 
 export default function TermsPage() {
   return (
@@ -18,78 +19,121 @@ export default function TermsPage() {
       <PageHero title="Terms & Conditions" crumbs={[{ label: "Terms & Conditions" }]} />
       <Container className="max-w-3xl py-14">
         <div className="space-y-8 text-ink/80">
-          <p className="text-sm text-muted">Effective date: {EFFECTIVE_DATE}</p>
+          <p className="text-sm text-muted">Effective Date: {EFFECTIVE_DATE}</p>
 
           <p className="leading-relaxed">
-            These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your use of{" "}
-            {siteConfig.url} and the services provided by {siteConfig.name} (&ldquo;
-            {siteConfig.shortName},&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
-            &ldquo;our&rdquo;). By accessing our website or using our services, you
-            agree to these Terms and our Privacy Policy. If you do not agree, please
-            do not use our website or services.
+            Welcome to the {siteConfig.name} website. These Terms &amp; Conditions
+            govern your use of our website and communications with {siteConfig.name}.
+          </p>
+          <p className="leading-relaxed">
+            By using this website, you agree to these Terms &amp; Conditions.
           </p>
 
-          <Section title="Our Services">
-            <p>{siteConfig.name} provides residential and commercial pest control services in {siteConfig.region} and surrounding areas. Service availability, scope, scheduling, and pricing are subject to inspection and confirmation, and specific terms may be set out in your individual service agreement.</p>
+          <Section title="Website Use">
+            <p>The information provided on this website is intended to provide general information about {siteConfig.name} and the pest control services we offer.</p>
+            <p>Information on the website should not be considered a guarantee that a particular pest problem can be eliminated or that a particular treatment is appropriate for every property.</p>
+            <p>Actual pest control recommendations and services may vary depending on inspection findings, property conditions, pest activity, service agreements, and other factors.</p>
           </Section>
 
-          <Section title="Estimates, Quotes & Scheduling">
-            <p>Quotes provided online, by phone, or by text are estimates based on the information you provide and may be adjusted after an in-person inspection. Submitting a quote request or contact form does not create a binding service agreement; service begins only after we confirm scheduling with you.</p>
+          <Section title="Pest Control Services">
+            <p>Specific pest control services may be subject to separate service agreements, estimates, warranties, treatment plans, or other terms provided at the time services are requested or performed.</p>
+            <p>If there is a conflict between these website Terms &amp; Conditions and a written pest control service agreement, the applicable service agreement will control with respect to those services.</p>
           </Section>
 
-          <Section title="Recurring Service Plans & Cancellation">
-            <p>Recurring plans continue on the schedule described in your service agreement until canceled. You may cancel in accordance with the terms of that agreement. Prices for recurring services may change with reasonable advance notice.</p>
-          </Section>
+          <Section title="SMS/Text Messaging Terms">
+            <SubHeading>{siteConfig.name} SMS Program</SubHeading>
+            <p>When you provide your mobile telephone number and expressly consent to receive SMS communications from {siteConfig.name}, you may receive text messages relating to your pest control services and interactions with us.</p>
+            <p>Messages may include:</p>
+            <ul className="list-disc space-y-1.5 pl-5">
+              <li>Appointment confirmations</li>
+              <li>Appointment reminders</li>
+              <li>Service notifications</li>
+              <li>Technician or scheduling updates</li>
+              <li>Responses to customer inquiries</li>
+              <li>Follow-up communications</li>
+              <li>Account or service-related information</li>
+              <li>Other communications you have consented to receive</li>
+            </ul>
+            <p>Message frequency varies. Message and data rates may apply. Consent to receive SMS messages is not a condition of purchasing any goods or services.</p>
 
-          <Section title="Payment">
-            <p>Payment terms, amounts, and billing frequency are set out in your service agreement or invoice. You agree to pay all charges for services rendered. Late or unpaid balances may be subject to fees or suspension of service as permitted by law.</p>
-          </Section>
+            <SubHeading>Opting Out</SubHeading>
+            <p>You may cancel SMS messages at any time by replying <strong>STOP</strong>.</p>
+            <p>After you send STOP, you may receive a final confirmation message notifying you that you have been unsubscribed. After that, you will no longer receive SMS messages from that messaging program unless you opt in again.</p>
 
-          <Section title="Service Guarantee">
-            <p>Any guarantee or re-service commitment applies only as expressly stated in your written service agreement and only to covered pests on active plans. Results can vary based on property conditions, access, and cooperation, and no specific outcome is guaranteed except as set out in your agreement.</p>
-          </Section>
-
-          <Section title="Customer Responsibilities">
-            <p>To perform services effectively and safely, you agree to provide reasonable access to the property, disclose known conditions or hazards, follow any preparation and post-treatment instructions we provide, and keep people and pets away from treated areas as directed.</p>
-          </Section>
-
-          <Section title="Text Messaging Terms">
-            <p>By providing your mobile number and opting in, you consent to receive service-related and, where applicable, promotional text messages from us. Message frequency varies, and message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. Consent to receive texts is not a condition of purchasing any service. See our Privacy Policy for details.</p>
-          </Section>
-
-          <Section title="Website Use & Intellectual Property">
-            <p>The content on this website — including text, graphics, logos, and images — is owned by or licensed to {siteConfig.name} and is protected by applicable laws. You may not copy, reproduce, or use our content without permission. You agree not to use the website unlawfully or in any way that could damage or impair it.</p>
-          </Section>
-
-          <Section title="Disclaimers">
-            <p>The website and its content are provided &ldquo;as is&rdquo; without warranties of any kind, express or implied, to the fullest extent permitted by law. We do not warrant that the website will be uninterrupted, error-free, or free of harmful components.</p>
-          </Section>
-
-          <Section title="Limitation of Liability">
-            <p>To the fullest extent permitted by law, {siteConfig.name} and its owners, employees, and agents will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of this website or our services. Nothing in these Terms limits liability that cannot be limited under applicable law.</p>
-          </Section>
-
-          <Section title="Indemnification">
-            <p>You agree to indemnify and hold harmless {siteConfig.name} from claims, damages, and expenses arising out of your misuse of the website or your breach of these Terms.</p>
-          </Section>
-
-          <Section title="Governing Law">
-            <p>These Terms are governed by the laws of the State of California, without regard to its conflict-of-laws rules. Any dispute will be resolved in the state or federal courts located in California, and you consent to their jurisdiction.</p>
-          </Section>
-
-          <Section title="Changes to These Terms">
-            <p>We may update these Terms from time to time. Changes are effective when posted, and the &ldquo;Effective date&rdquo; above will be updated accordingly. Your continued use of the website or services means you accept the updated Terms.</p>
-          </Section>
-
-          <Section title="Contact Us">
+            <SubHeading>Getting Help</SubHeading>
             <p>
-              Questions about these Terms? Reach us at{" "}
+              For assistance, reply <strong>HELP</strong> to any SMS message or contact{" "}
+              {siteConfig.name} directly at{" "}
+              <a href={siteConfig.phoneHref} className="font-semibold text-brand-red">
+                {siteConfig.phone}
+              </a>{" "}
+              or{" "}
               <a href={`mailto:${siteConfig.email}`} className="font-semibold text-brand-red">
                 {siteConfig.email}
               </a>
-              , {siteConfig.phone}, or {siteConfig.address.street},{" "}
-              {siteConfig.address.city}, {siteConfig.address.state}{" "}
-              {siteConfig.address.zip}.
+              .
+            </p>
+            <p>Wireless carriers are not liable for delayed or undelivered messages.</p>
+            <p>Message delivery is subject to the effective transmission of messages by your wireless carrier and other service providers.</p>
+            <p>
+              Your use of SMS communications is also subject to our{" "}
+              <Link href="/privacy" className="font-semibold text-brand-red">
+                Privacy Policy
+              </Link>
+              .
+            </p>
+          </Section>
+
+          <Section title="Privacy">
+            <p>
+              Your use of this website and participation in our SMS program are
+              subject to our{" "}
+              <Link href="/privacy" className="font-semibold text-brand-red">
+                Privacy Policy
+              </Link>
+              .
+            </p>
+            <p>Mobile information and SMS consent are handled according to the Privacy Policy.</p>
+          </Section>
+
+          <Section title="Intellectual Property">
+            <p>Unless otherwise indicated, website content including text, graphics, logos, images, branding, and other materials is owned by or licensed to {siteConfig.name} and may not be reproduced or distributed without permission except as permitted by law.</p>
+          </Section>
+
+          <Section title="Third-Party Services">
+            <p>Our website may use or link to third-party services. {siteConfig.name} is not responsible for the content, availability, security, or privacy practices of third-party websites or services.</p>
+          </Section>
+
+          <Section title="Disclaimer">
+            <p>We make reasonable efforts to provide accurate information on our website, but we do not guarantee that all website information will always be complete, current, or error-free.</p>
+            <p>Pest control results can vary depending on pest type, environmental conditions, property conditions, customer cooperation, treatment methods, and other circumstances.</p>
+          </Section>
+
+          <Section title="Limitation of Liability">
+            <p>To the fullest extent permitted by applicable law, {siteConfig.name} will not be liable for indirect, incidental, special, or consequential damages resulting solely from the use or inability to use this website.</p>
+            <p>Nothing in these Terms &amp; Conditions is intended to limit rights or remedies that cannot legally be limited under applicable law.</p>
+          </Section>
+
+          <Section title="Changes to These Terms">
+            <p>We may update these Terms &amp; Conditions periodically. Any changes will be posted on this page with an updated effective date.</p>
+          </Section>
+
+          <Section title="Contact Us">
+            <p>Questions regarding these Terms &amp; Conditions may be directed to:</p>
+            <p>
+              {siteConfig.name}
+              <br />
+              Email:{" "}
+              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-brand-red">
+                {siteConfig.email}
+              </a>
+              <br />
+              Phone:{" "}
+              <a href={siteConfig.phoneHref} className="font-semibold text-brand-red">
+                {siteConfig.phone}
+              </a>
+              <br />
+              Website: {siteConfig.url.replace(/^https?:\/\//, "")}
             </p>
           </Section>
         </div>
@@ -105,4 +149,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
       <div className="mt-3 space-y-3 leading-relaxed">{children}</div>
     </section>
   );
+}
+
+function SubHeading({ children }: { children: React.ReactNode }) {
+  return <h3 className="pt-1 text-base font-bold text-ink">{children}</h3>;
 }
