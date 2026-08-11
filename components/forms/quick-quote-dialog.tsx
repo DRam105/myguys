@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { siteConfig } from "@/lib/site-config";
 import { submitLead } from "@/lib/submit-lead";
+import { SmsConsent } from "@/components/forms/sms-consent";
 
 export function QuickQuoteDialog({
   triggerClassName,
@@ -138,6 +139,8 @@ export function QuickQuoteDialog({
                   {...register("issue")}
                 />
               </Field>
+
+              <SmsConsent {...register("smsConsent")} />
 
               {serverError && (
                 <p className="flex items-center gap-2 text-sm font-medium text-brand-red">

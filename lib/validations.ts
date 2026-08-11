@@ -15,6 +15,7 @@ export const contactSchema = z.object({
   email,
   phone,
   message: z.string().min(10, "Please tell us a bit more (10+ characters)"),
+  smsConsent: z.boolean().optional(),
 });
 export type ContactValues = z.infer<typeof contactSchema>;
 
@@ -24,6 +25,7 @@ export const quickQuoteSchema = z.object({
   email,
   phone,
   issue: z.string().min(3, "Please tell us the pest issue you're having"),
+  smsConsent: z.boolean().optional(),
 });
 export type QuickQuoteValues = z.infer<typeof quickQuoteSchema>;
 
@@ -48,6 +50,7 @@ export const quoteStep3Schema = z.object({
   email,
   phone,
   notes: z.string().optional(),
+  smsConsent: z.boolean().optional(),
 });
 
 /** Full quote payload = all steps combined. */

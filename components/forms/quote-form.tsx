@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/select";
 import { siteConfig } from "@/lib/site-config";
 import { submitLead } from "@/lib/submit-lead";
+import { SmsConsent } from "@/components/forms/sms-consent";
 import { cn } from "@/lib/utils";
 
 const steps: { title: string; fields: Path<QuoteValues>[] }[] = [
@@ -65,6 +66,7 @@ export function QuoteForm() {
       email: "",
       phone: "",
       notes: "",
+      smsConsent: false,
     },
   });
 
@@ -232,6 +234,7 @@ export function QuoteForm() {
             <Field label="Anything else we should know? (optional)" htmlFor="notes">
               <Textarea id="notes" rows={3} placeholder="Gate code, pets, severity, etc." {...register("notes")} />
             </Field>
+            <SmsConsent {...register("smsConsent")} />
           </div>
         )}
 

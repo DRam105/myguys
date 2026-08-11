@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { contactSchema, type ContactValues } from "@/lib/validations";
 import { submitLead } from "@/lib/submit-lead";
+import { SmsConsent } from "@/components/forms/sms-consent";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -68,6 +69,8 @@ export function ContactForm() {
           {...register("message")}
         />
       </Field>
+
+      <SmsConsent {...register("smsConsent")} />
 
       {serverError && (
         <p className="flex items-center gap-2 text-sm font-medium text-brand-red">
