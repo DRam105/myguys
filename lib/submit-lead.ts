@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
  * trail of what was consented to. Keep in sync with the visible text in
  * `components/forms/sms-consent.tsx`.
  */
-export const SMS_CONSENT_TEXT = `I agree to receive text messages from ${siteConfig.name} about my request. Msg & data rates may apply, message frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our Terms (${siteConfig.url}/terms) and Privacy Policy (${siteConfig.url}/privacy). We never sell or share your information with third parties for marketing.`;
+export const SMS_CONSENT_TEXT = `I agree to receive text messages — such as appointment confirmations, reminders, and service updates — from ${siteConfig.name} at the phone number I provide. Msg & data rates may apply. Message frequency varies. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase. We never sell or share your information with third parties for marketing. See our Terms (${siteConfig.url}/terms) and Privacy Policy (${siteConfig.url}/privacy).`;
 
 /**
  * Sends a lead (from any site form) to the server-side relay at /api/lead,
