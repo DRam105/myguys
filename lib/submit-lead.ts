@@ -18,8 +18,16 @@ export async function submitLead(payload: Record<string, unknown>) {
   const now = new Date().toISOString();
   const consented = payload.smsConsent === true;
 
+  // Normalize the free-text description into a single `message` field so it
+  // maps consistently in the CRM, regardless of which form it came from
+  // (contact -> message, quote -> notes, quick-quote -> issue).
+  const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+  const message =
+    str(payload.message) || str(payload.notes) || str(payload.issue) || "";
+
   const enriched = {
     ...payload,
+    message,
     source: siteConfig.url,
     pageUrl: typeof window !== "undefined" ? window.location.href : undefined,
     submittedAt: now,
