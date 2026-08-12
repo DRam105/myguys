@@ -49,7 +49,8 @@ export default function PrivacyPage() {
 
           <Section title="Text Messaging (SMS)">
             <p>If you provide your mobile number and opt in, we may send you text messages related to your service (such as appointment confirmations, reminders, and follow-ups) and, where you consent, promotional offers. Message frequency varies. Message and data rates may apply.</p>
-            <p>You can opt out of text messages at any time by replying <strong>STOP</strong>, and reply <strong>HELP</strong> for help. Opting out of texts will not affect our ability to contact you by phone or email about your service. We do not sell or share mobile opt-in information or consent with third parties for their own marketing.</p>
+            <p>You can opt out of text messages at any time by replying <strong>STOP</strong>, and reply <strong>HELP</strong> for help. Opting out of texts will not affect our ability to contact you by phone or email about your service.</p>
+            <p><strong>Mobile opt-in information and consent — including your mobile phone number and your agreement to receive text messages — will not be shared, sold, or rented to any third parties or affiliates for their marketing or promotional purposes.</strong></p>
           </Section>
 
           <Section title="Cookies & Analytics">
@@ -57,7 +58,7 @@ export default function PrivacyPage() {
           </Section>
 
           <Section title="How We Share Information">
-            <p>We do not sell your personal information. We share information only:</p>
+            <p>We do not sell your personal information, and we do not share mobile opt-in information or SMS consent with third parties for their marketing or promotional purposes. We share information only:</p>
             <ul className="list-disc space-y-1.5 pl-5">
               <li>With service providers who help us operate our business (for example, scheduling and CRM, communications, hosting, analytics, and payment providers), under obligations to protect your information;</li>
               <li>When required by law, legal process, or to protect our rights, safety, or property; and</li>

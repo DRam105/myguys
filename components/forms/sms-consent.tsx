@@ -27,7 +27,7 @@ export function SmsConsent(props: InputHTMLAttributes<HTMLInputElement>) {
         <Link href="/privacy" className="font-semibold text-brand-red underline">
           Privacy Policy
         </Link>
-        .
+        . We never sell or share your information with third parties for marketing.
       </p>
     </div>
   );
